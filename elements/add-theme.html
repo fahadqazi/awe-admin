@@ -1,16 +1,16 @@
-<link href="bower_components/polymer/polymer.html" rel="import"/>
-<link href="bower_components/iron-form/iron-form.html" rel="import"/>
-<link href="bower_components/paper-input/paper-input.html" rel="import"/>
-<link href="bower_components/paper-dropdown-menu/paper-dropdown-menu.html" rel="import"/>
-<link href="bower_components/paper-listbox/paper-listbox.html" rel="import"/>
-<link href="bower_components/paper-item/paper-item.html" rel="import"/>
-<link href="bower_components/paper-material/paper-material.html" rel="import"/>
-<link href="bower_components/paper-card/paper-card.html" rel="import"/>
-<link href="bower_components/paper-button/paper-button.html" rel="import"/>
-<link href="bower_components/iron-ajax/iron-ajax.html" rel="import"/>
-<link href="bower_components/paper-toggle-button/paper-toggle-button.html" rel="import"/>
-<link href="bower_components/paper-toast/paper-toast.html" rel="import"/>
-<link href="bower_components/iron-label/iron-label.html" rel="import"/>
+<link href="../bower_components/polymer/polymer.html" rel="import"/>
+<link href="../bower_components/iron-form/iron-form.html" rel="import"/>
+<link href="../bower_components/paper-input/paper-input.html" rel="import"/>
+<link href="../bower_components/paper-dropdown-menu/paper-dropdown-menu.html" rel="import"/>
+<link href="../bower_components/paper-listbox/paper-listbox.html" rel="import"/>
+<link href="../bower_components/paper-item/paper-item.html" rel="import"/>
+<link href="../bower_components/paper-material/paper-material.html" rel="import"/>
+<link href="../bower_components/paper-card/paper-card.html" rel="import"/>
+<link href="../bower_components/paper-button/paper-button.html" rel="import"/>
+<link href="../bower_components/iron-ajax/iron-ajax.html" rel="import"/>
+<link href="../bower_components/paper-toggle-button/paper-toggle-button.html" rel="import"/>
+<link href="../bower_components/paper-toast/paper-toast.html" rel="import"/>
+<link href="../bower_components/iron-label/iron-label.html" rel="import"/>
 <dom-module id="add-theme">
   <template>
   <style>
@@ -65,7 +65,7 @@
       <form is="iron-form" id="form" method="post" action="http://fahad.quiddiportal.com/polymer_form_api/add-theme" content-type="application/json">
    	
 	<div class="card-wrapper"><!--WEBSITE-->
-	  <paper-card heading="Website" class="paper-card-panel" id="cardz" elevation="2">
+	  <paper-card heading="Website" class="paper-card-panel" id="cardz" elevation="3">
 	    <div class="fields">
 	      <paper-input name="websiteName" label="Website Name (e.g. multimonthloans.com )" error-message="needs some text!"
 	      		   value={{structure.website.name}} autofocus required auto-validate 
@@ -83,7 +83,7 @@
 	</div>
 	
    	<div class="card-wrapper"><!--COMPANY-->
-	  <paper-card heading="Company" class="paper-card-panel" elevation="2">
+	  <paper-card heading="Company" class="paper-card-panel" elevation="3">
 	    <div class="fields">
 	      <paper-input name="company-name" label="Company name" 
 			   style="left-margin:20px;" value={{structure.company.name}} 
@@ -106,7 +106,7 @@
 	</div>    
 
 	<div class="card-wrapper" hidden$={{!structure.company.fsa.full_permission}}><!--HOLDING COMPANY-->
-	  <paper-card heading="Holding Company" class="paper-card-panel" elevation="2">
+	  <paper-card heading="Holding Company" class="paper-card-panel" elevation="3">
 	    <div class="fields">
 	      <paper-input name="holding-company-name" label="Name" value={{structure.holding_company.name}} 
 			   error-message="needs some text!" autofocus required auto-validate></paper-input>
@@ -117,7 +117,7 @@
 	</div>
 	
 	<div class="card-wrapper"><!--PAGE COLORS-->
-	  <paper-card heading="Page Colors" class="paper-card-panel" elevation="2">
+	  <paper-card heading="Page Colors" class="paper-card-panel" elevation="3">
 	    <div class="fields">
 	      <paper-input label="Text" value={{structure.color.body_text}} error-message="needs some text!" 
 			   autofocus required auto-validate></paper-input>
@@ -130,7 +130,7 @@
 	</div>
 
 	<div class="card-wrapper"><!--BUTTON COLORS-->
-	  <paper-card heading="Button Colors" class="paper-card-panel" elevation="2">
+	  <paper-card heading="Button Colors" class="paper-card-panel" elevation="3">
 	    <div class="fields">
 	      <paper-input label="Button-still" value={{structure.button.still}} error-message="needs some text!" 
 			   autofocus required auto-validate></paper-input>

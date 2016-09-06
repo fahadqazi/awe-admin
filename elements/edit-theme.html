@@ -1,8 +1,8 @@
-<link href="bower_components/polymer/polymer.html" rel="import"/>
-<link href="bower_components/paper-dropdown-menu/paper-dropdown-menu.html" rel="import"/>
-<link href="bower_components/paper-listbox/paper-listbox.html" rel="import"/>
-<link href="bower_components/paper-item/paper-item.html" rel="import"/>
-<link href="bower_components/paper-toast/paper-toast.html" rel="import"/>
+<link href="../bower_components/polymer/polymer.html" rel="import"/>
+<link href="../bower_components/paper-dropdown-menu/paper-dropdown-menu.html" rel="import"/>
+<link href="../bower_components/paper-listbox/paper-listbox.html" rel="import"/>
+<link href="../bower_components/paper-item/paper-item.html" rel="import"/>
+<link href="../bower_components/paper-toast/paper-toast.html" rel="import"/>
 
 
 <dom-module id="edit-theme">
@@ -76,7 +76,7 @@
 
 
     <div class="card-wrapper"><!--WEBSITE-->
-      <paper-card heading="Website" class="paper-card-panel" id="cardz" elevation="2">
+      <paper-card heading="Website" class="paper-card-panel" id="cardz" elevation="3">
 
 	<!-- <paper-card heading="Website"> -->
         <div class="fields">
@@ -97,7 +97,7 @@
 	    action="http://fahad.quiddiportal.com/polymer_form_api/edit-theme" content-type="application/json">
 
         <div class="card-wrapper"><!--WEBSITE-->
-          <paper-card heading="Website" class="paper-card-panel" id="cardz" elevation="0">
+          <paper-card heading="Website" class="paper-card-panel" id="cardz" elevation="3">
             <div class="fields">
               <paper-input name="websiteName" label="Website Name" error-message="needs some text!" 
 			   value={{structure.website.name}} 
@@ -119,7 +119,7 @@
         </div>
 
         <div class="card-wrapper"><!--COMPANY-->
-          <paper-card heading="Company" class="paper-card-panel" elevation="2">
+          <paper-card heading="Company" class="paper-card-panel" elevation="3">
             <div class="fields">
 
               <paper-input name="company-name" label="Company name" 
@@ -149,7 +149,7 @@
         </div>
 
         <div class="card-wrapper" hidden$={{!structure.company.fsa.full_permission}}><!--HOLDING COMPANY-->
-          <paper-card heading="Holding Company" class="paper-card-panel" elevation="2">
+          <paper-card heading="Holding Company" class="paper-card-panel" elevation="3">
             <div class="fields">
               <paper-input name="holding-company-name" label="Name" value={{structure.holding_company.name}} 
 			   error-message="needs some text!" autofocus required auto-validate></paper-input>
@@ -161,7 +161,7 @@
         </div>
 
         <div class="card-wrapper"><!--PAGE COLORS-->
-          <paper-card heading="Page Colors" class="paper-card-panel" elevation="2">
+          <paper-card heading="Page Colors" class="paper-card-panel" elevation="3">
             <div class="fields">
               <paper-input label="Text" value={{structure.color.body_text}} error-message="needs some text!" 
 			   autofocus required auto-validate></paper-input>
@@ -174,7 +174,7 @@
         </div>
 
         <div class="card-wrapper"><!--BUTTON COLORS-->
-          <paper-card heading="Button Colors" class="paper-card-panel" elevation="2">
+          <paper-card heading="Button Colors" class="paper-card-panel" elevation="3">
             <div class="fields">
               <paper-input label="Button-still" value={{structure.button.still}} error-message="needs some text!" 
 			   autofocus required auto-validate></paper-input>
