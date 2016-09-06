@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+	  crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+	  integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" 
+	  crossorigin="anonymous">
+    
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+    <link href="bower_components/paper-input/paper-input.html" rel="import"/>
+    <link href="bower_components/paper-material/paper-material.html" rel="import"/>
+    <link href="bower_components/paper-toolbar/paper-toolbar.html" rel="import"/>
+    <link href="bower_components/paper-icon-button/paper-icon-button.html" rel="import"/>
+    <!-- <link href="bower_components/paper-progress/paper-progress.html" rel="import"/> -->
+    <link href="bower_components/iron-icons/iron-icons.html" rel="import"/>
+    <link href="bower_components/paper-header-panel/paper-header-panel.html" rel="import"/>
+    <link href="bower_components/paper-drawer-panel/paper-drawer-panel.html" rel="import"/>
+    <link href="bower_components/paper-menu/paper-menu.html" rel="import"/>
+    <link href="bower_components/paper-item/paper-item.html" rel="import"/>
+    <link href="bower_components/iron-pages/iron-pages.html" rel="import"/>
+    <!--Custom Elements-->
+    <link href="add-theme.html" rel="import"/>
+    <link href="clone-theme.html" rel="import"/>
+    <link href="edit-theme.html" rel="import"/>  
+    <link href="style.css" rel="stylesheet"/>
+  </head>
+
+  <body>
+    <template is="dom-bind" id="app">
+      <paper-drawer-panel>
+	
+	<paper-header-panel drawer>
+	  <paper-toolbar >
+	    <div class="menu-name">Menu</div>
+	  </paper-toolbar>
+	  <paper-menu selected="{{page}}" attr-for-selected="data-category" >
+	    <paper-item data-category="add-theme">Add Theme</paper-item>
+	    <paper-item data-category="edit-theme">Edit Theme</paper-item>
+	    <paper-item data-category="clone-theme">Clone existing Theme</paper-item>
+
+	  </paper-menu>
+	</paper-header-panel><!--PAPER HEADER PANEL ( DRAWER ) -->
+
+	<paper-header-panel main>
+	  <paper-toolbar>
+	    <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
+	    <div class="title">Affiliate Website Engine</div>
+	  </paper-toolbar>
+	  <div class="content"> 
+	    <iron-pages selected="{{page}}" attr-for-selected="data-category">
+	      <section data-category="add-theme">
+		<add-theme></add-theme>
+	      </section>
+	      <section data-category="edit-theme">
+ 		<edit-theme></edit-theme>
+	      </section>
+	      <section data-category="clone-theme"> 
+		<clone-theme></clone-theme>
+	      </section>
+	    </iron-pages>
+	  </div>	  
+	</paper-header-panel><!--PAPER HEADER PANEL ( Main ) -->
+
+      </paper-drawer-panel><!--PAPER DRAWER PANEL-->
+    </template>
+  </body>
+</html>
+
+
